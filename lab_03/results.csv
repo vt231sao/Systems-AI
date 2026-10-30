@@ -1,0 +1,21 @@
+task,variant,setting,val_loss,val_nats_per_char,params_M,accuracy,f1,seconds_20_texts,coverage
+mini-gpt,v1_baseline,"vocab=4000, ctx=64, layers=4",3.735,0.977,1.83,,,,
+mini-gpt,v2_vocab8000,"vocab=8000, ctx=64, layers=4",4.207,0.948,2.86,,,,
+mini-gpt,v3_ctx128,"vocab=4000, ctx=128, layers=4",3.675,0.961,1.84,,,,
+mini-gpt,v4_layers6,"vocab=4000, ctx=64, layers=6",3.662,0.958,2.22,,,,
+sentiment,lxyuan_distilbert_multi,default,,,135.3,0.8,0.75,0.11,
+sentiment,mdeberta_zeroshot,default,,,278.8,1.0,1.0,1.1,
+sentiment,xlmr_twitter,default,,,278.0,0.95,0.952,0.32,
+sentiment,mdeberta_zeroshot,A: шаблон = «Цей текст {}.»,,,,1.0,1.0,,
+sentiment,mdeberta_zeroshot,A: шаблон = «Це речення має {} настрій.»,,,,1.0,1.0,,
+sentiment,mdeberta_zeroshot,A: шаблон = «{}.»,,,,1.0,1.0,,
+sentiment,mdeberta_zeroshot,"B: мітки = ['хороший', 'поганий']",,,,0.95,0.947,,
+sentiment,mdeberta_zeroshot,"B: мітки = ['радісний', 'сумний']",,,,0.95,0.947,,
+sentiment,mdeberta_zeroshot,"B: мітки = ['схвальний', 'несхвальний']",,,,0.95,0.947,,
+sentiment,mdeberta_zeroshot,C: поріг впевненості 0.9,,,,1.0,,,0.95
+sentiment,mdeberta_zeroshot,C: поріг впевненості 0.99,,,,1.0,,,0.55
+sentiment,mdeberta_zeroshot,C: поріг впевненості 0.999,,,,1.0,,,0.05
+sentiment,lxyuan_distilbert_multi,D: positive − negative > 0.0,,,,0.8,0.75,,
+sentiment,lxyuan_distilbert_multi,D: positive − negative > -0.1,,,,0.8,0.778,,
+sentiment,lxyuan_distilbert_multi,D: positive − negative > -0.3,,,,0.7,0.75,,
+sentiment,lxyuan_distilbert_multi,D: positive − negative > -0.5,,,,0.7,0.769,,
